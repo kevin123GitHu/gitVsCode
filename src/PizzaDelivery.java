@@ -4,17 +4,11 @@ public class PizzaDelivery {
 
     // ...
 
-    int getRating() {
+	int getRating() {
 
-        return moreThanFiveLateDeliveries() ? 2 : 1;
+		return numberOfLateDeliveries > 5 ? 2 : 1;
 
-    }
-
-    boolean moreThanFiveLateDeliveries() {
-
-        return numberOfLateDeliveries > 5;
-
-    }
+	}
 
 	double potentialEnergy(double mass, double height) {
 
