@@ -1,19 +1,25 @@
 public class PizzaDelivery {
-	private final double GRAVITY_CONSTANT = 9.81;
-	private int numberOfLateDeliveries;
 
-	// ...
+    private int numberOfLateDeliveries;
 
-	int getRating() {
+    // ...
 
-		return numberOfLateDeliveries > 5 ? 2 : 1;
+    int getRating() {
 
-	}
+        return moreThanFiveLateDeliveries() ? 2 : 1;
 
-	double potentialEnergy(double mass, double height) {
+    }
 
-		return mass * height * GRAVITY_CONSTANT;
+    boolean moreThanFiveLateDeliveries() {
 
-	}
+        return numberOfLateDeliveries > 5;
+
+    }
+
+    double potentialEnergy(double mass, double height) {
+
+        return mass * height * 9.81;
+
+    }
 
 }
