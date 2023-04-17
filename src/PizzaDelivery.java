@@ -1,5 +1,5 @@
 public class PizzaDelivery {
-
+	private final double GRAVITY_CONSTANT = 9.81;
     private int numberOfLateDeliveries;
 
     // ...
@@ -16,10 +16,10 @@ public class PizzaDelivery {
 
     }
 
-    double potentialEnergy(double mass, double height) {
+	double potentialEnergy(double mass, double height) {
 
-        return mass * height * 9.81;
+		return mass * height * GRAVITY_CONSTANT;
 
-    }
+	}
 
 }
